@@ -27,7 +27,7 @@ def main():
     target = input("Write the target to scan:")    
     print("The target is: " + target)
     
-    print("Scan Modes: (1)Agressive (2)Beast (3)Silent (4)Fazt all ports (5)Custom Automation")
+    print("Scan Modes: (1)Agressive (2)Beast (3)Silent (4)Fazt all ports (5)Custom Automation (6)The 4+2")
     mode = input("Enter the selected mode: ")
     
 
