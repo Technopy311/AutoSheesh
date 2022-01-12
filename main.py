@@ -1,4 +1,20 @@
+#!/usr/bin/python3
+
 import os
+
+
+def saveScans():
+    print("Would you like to save the scan?")
+    print("The scan ")
+    opt = input("(1)Yes (0) No: ")
+
+
+    if opt == "1":
+        return(1)
+    elif opt == "0":
+        return(0)
+    else:
+        print("That option does not exist, proceding with save.")
 
 
 
@@ -17,7 +33,8 @@ def uidCheck():
 
 
 def Aggressive(target):
-    pass
+    uidCheck()
+    # save = 
 
 
 def Beast(target):
@@ -49,8 +66,8 @@ def main():
     
     print("\n")
     print("\n")
-    print("Scan Modes:\n(1)Agressive (2)Beast (3)Silent ")
-    print("(4)Fazt all ports (5)Custom Automation (6)The GodScan (scans 4+2) ")
+    print("Scan Modes:\n(1)Agressive \n(2)Beast \n (3)Silent \n")
+    print("(4)Fazt all ports \n (5)Custom Automation \n(6)The GodScan (scans 4+2) \n")
     print("(0) Exit ")
     print("\n")
     
