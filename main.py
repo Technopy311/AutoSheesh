@@ -57,8 +57,7 @@ def FastPorts(target):
 
 
 def Custom(target):
-    save = saveScans()
-    command = input("Enter your own nmap commands \n:")
+    input("Enter your own nmap commands \n:")
 
     print("Why do u use this option, just write your own nmap in the terminal.\n pfff")
     exit()
@@ -66,10 +65,12 @@ def Custom(target):
 
 def CrazyScan(target):
     save = saveScans()
-    command = "nmap -sT -sC -sV -O --script vuln --min-rate 5000 -Pn -n " + target + save
+    commandA = "nmap -sT -sC -sV -O --script vuln --min-rate 5000 -Pn -n " + target + save
+    commandB = "nmap -sU -sC -sV -O --script vuln --min-rate 5000 -Pn -n " + target + save
 
     print("This scan will execute the following:")
-    print(command)
+    print(commandA)
+    print(commandB)
 
     crazy = input("\nAre you sure that you want to execute this command?\n(1)Yes (2)No: ")
     
@@ -83,8 +84,10 @@ def CrazyScan(target):
         CrazyScan(target)
 
     if int(crazy) == 1:
-        print("0.0, you are crazy!!! aaaaagghh *runs away* \n")
-        os.system(command)
+        print("\nO_o!, you are crazy!!! aaaaagghh *runs away* \n")
+        os.system(commandA)
+        os.system(commandB)
+
     elif int(crazy) == 2:
         print("I though that you were Crazy!! Fiuf, cya :P")
     else:
